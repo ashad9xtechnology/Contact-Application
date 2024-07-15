@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "start": "node server.js",
     "build": "cd client && npm install && npm run build",
-    "build:functions": "netlify-lambda build functions --config ./webpack.functions.js",
     "server": "nodemon server.js",
-    "client": "cd client && npm run dev",
+    "client": "cd client && npm install && npm run dev",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "keywords": [],
@@ -19,13 +19,7 @@
     "mongoose": "^8.5.1"
   },
   "devDependencies": {
-    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.18.6",
-    "@babel/plugin-proposal-optional-chaining": "^7.21.0",
-    "@netlify/functions": "^2.8.1",
     "concurrently": "^8.2.2",
-    "mongodb": "^6.8.0",
-    "netlify-cli": "^17.33.3",
-    "netlify-lambda": "^2.0.16",
     "nodemon": "^3.1.4"
   }
 }

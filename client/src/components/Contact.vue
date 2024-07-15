@@ -31,11 +31,11 @@ export default {
   },
   methods: {
     async fetchContacts() {
-      const response = await axios.get('/.netlify/functions/api');
+      const response = await axios.get('http://localhost:5000/api/contacts');
       this.contacts = response.data;
     },
     async addContact() {
-      await axios.post('/.netlify/functions/api', this.newContact);
+      await axios.post('http://localhost:5000/api/contacts', this.newContact);
       this.newContact = { name: '', email: '', message: '' };
       this.fetchContacts();
     },
