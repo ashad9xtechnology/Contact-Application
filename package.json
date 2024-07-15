@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "cd client && npm run build",
+    "build": "cd client && npm install && npm run build",
     "build:functions": "netlify-lambda build functions",
     "server": "nodemon server.js",
     "client": "cd client && npm run dev",
