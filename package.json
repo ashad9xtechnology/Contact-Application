@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "build": "cd client && npm run build",
+    "build:functions": "netlify-lambda build functions",
     "server": "nodemon server.js",
     "client": "cd client && npm run dev",
     "dev": "concurrently \"npm run server\" \"npm run client\""
@@ -17,7 +19,11 @@
     "mongoose": "^8.5.1"
   },
   "devDependencies": {
+    "@netlify/functions": "^2.8.1",
     "concurrently": "^8.2.2",
+    "mongodb": "^6.8.0",
+    "netlify-cli": "^17.33.3",
+    "netlify-lambda": "^2.0.16",
     "nodemon": "^3.1.4"
   }
 }
